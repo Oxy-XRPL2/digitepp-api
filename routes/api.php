@@ -9,3 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/keps', [KepController::class, 'index']);
+Route::get('/kep/{id}', [KepController::class, 'show']);
