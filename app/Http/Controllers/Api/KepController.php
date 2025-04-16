@@ -10,7 +10,7 @@ class KepController extends Controller
 {
     public function index(): JsonResponse
     {
-        $keps = Kep::with(['lembaga', 'anggota.role'])->get();
+        $keps = Kep::with(['lembaga', 'anggota.role'])->limit(11)->get();
 
         return response()->json([
             'status' => 'success',
